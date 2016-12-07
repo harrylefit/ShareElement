@@ -5,7 +5,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
@@ -44,7 +44,7 @@ public class RecycerViewFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         imageAdapter = new ImageAdapter();
-        rvData.setLayoutManager(new LinearLayoutManager(getContext()));
+        rvData.setLayoutManager(new GridLayoutManager(getContext(),3));
         rvData.setAdapter(imageAdapter);
     }
 
@@ -70,11 +70,11 @@ public class RecycerViewFragment extends Fragment {
         @Override
         public void onClick(View view) {
             setSharedElementReturnTransition(TransitionInflater.from(getContext()).inflateTransition(R.transition.change_image_trans));
-            setExitTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.explode));
+            setExitTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.fade));
 
             DetailItemRecyclerViewFragment detailItemRecyclerViewFragment = DetailItemRecyclerViewFragment.newInstance();
             detailItemRecyclerViewFragment.setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(R.transition.change_image_trans));
-            detailItemRecyclerViewFragment.setEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.explode));
+            detailItemRecyclerViewFragment.setEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.fade));
             Bundle bundle = new Bundle();
             bundle.putString(DetailItemRecyclerViewFragment.TRANSITION_NAME, view.getTransitionName());
             bundle.putParcelable(DetailItemRecyclerViewFragment.BITMAP_KEY
