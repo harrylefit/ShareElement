@@ -1,7 +1,9 @@
-package vn.eazy.share.element;
+package vn.eazy.share.element.sharedElement;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import vn.eazy.share.element.R;
 
 public class DetailActivity extends AppCompatActivity {
 

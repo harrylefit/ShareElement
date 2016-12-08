@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vn.eazy.share.element.reveal.RevealFragment">
+
+    <ImageView
+        android:id="@+id/ivBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/demo" />
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/ivReveal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary" >
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:visibility="gone"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:text="Harry đẹp trai"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="Harry xinh trai"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="Harry quá đẹp trai"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_twitter"
+        app:fabSize="auto" />
+</RelativeLayout>

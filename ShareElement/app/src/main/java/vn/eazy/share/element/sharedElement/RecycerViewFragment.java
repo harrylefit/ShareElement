@@ -1,4 +1,4 @@
-package vn.eazy.share.element;
+package vn.eazy.share.element.sharedElement;
 
 
 import android.graphics.drawable.BitmapDrawable;
@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import vn.eazy.share.element.R;
 
 
 /**

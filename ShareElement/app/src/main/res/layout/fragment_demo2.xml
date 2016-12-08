@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="vn.eazy.share.element.Demo2Fragment">
+    tools:context="vn.eazy.share.element.sharedElement.Demo2Fragment">
 
     <ImageView
         android:id="@+id/otherImage"
