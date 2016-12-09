@@ -32,7 +32,6 @@ import com.bumptech.glide.request.target.Target;
 import com.flaviofaria.kenburnsview.KenBurnsView;
 import com.flaviofaria.kenburnsview.RandomTransitionGenerator;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -189,11 +188,7 @@ public class DetailInfoFragment extends Fragment implements Animator.AnimatorLis
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (newState != RecyclerView.SCROLL_STATE_IDLE) {
-                    galleryAdapter.setLockedRevealAnimation(true);
-                } else {
-                    galleryAdapter.setLockedRevealAnimation(false);
-                }
+//
             }
 
             @Override
@@ -201,21 +196,30 @@ public class DetailInfoFragment extends Fragment implements Animator.AnimatorLis
                 super.onScrolled(recyclerView, dx, dy);
             }
         });
+//        rvGallery.addOnChildAttachStateChangeListener(new RecyclerView.OnChildAttachStateChangeListener() {
+//            @Override
+//            public void onChildViewAttachedToWindow(View view) {
+// if (newState != RecyclerView.SCROLL_STATE_IDLE) {
+//                    galleryAdapter.setLockedRevealAnimation(true);
+//                } else {
+//                    galleryAdapter.setLockedRevealAnimation(false);
+//                }
+//            }
+//
+//            @Override
+//            public void onChildViewDetachedFromWindow(View view) {
+//                View ivData = view.findViewById(R.id.ivData);
+//                if(ivData != null && ivData.getTag() != null && ivData.getTag() instanceof Animator){
+//                    Animator animator = (Animator) ivData.getTag();
+//                    animator.cancel();
+//                }
+//            }
+//        });
         rvGallery.setAdapter(galleryAdapter);
     }
 
     private void initDataForAdapter() {
-        List<String> galleryUrls = new ArrayList<>();
-        galleryUrls.add("https://scontent-sin6-1.xx.fbcdn.net/v/t31.0-8/q81/p960x960/15025148_1199850990073631_8316778359208877666_o.jpg?oh=996d84628106d31e44cc6c74d5734e60&oe=58EC53D0");
-        galleryUrls.add("https://fb-s-b-a.akamaihd.net/h-ak-xpf1/t45.5328-0/s552x414/14965806_1216106015130971_3352208363776638976_n.jpg");
-        galleryUrls.add("https://fb-s-c-a.akamaihd.net/h-ak-xpt1/t45.5328-0/s552x414/14966016_1294243890649150_1889611011229483008_n.jpg");
-        galleryUrls.add("https://fb-s-b-a.akamaihd.net/h-ak-xft1/t45.5328-0/p180x540/10737100_1049594078444975_1152134053_n.jpg");
-        galleryUrls.add("https://fb-s-c-a.akamaihd.net/h-ak-xtf1/t45.5328-0/p180x540/12447837_1163642346988736_1186792854_n.jpg");
-        galleryUrls.add("https://fb-s-d-a.akamaihd.net/h-ak-xta1/t45.5328-0/s552x414/14750931_1127901797297575_7497639248015654912_n.jpg");
-        galleryUrls.add("https://fb-s-b-a.akamaihd.net/h-ak-xpa1/t45.5328-0/p180x540/12061175_1000345836714985_456572149_n.jpg");
-        galleryUrls.add("https://fb-s-b-a.akamaihd.net/h-ak-xpa1/t45.5328-0/p180x540/12061175_1000345836714985_456572149_n.jpg");
-        galleryUrls.add("https://fb-s-b-a.akamaihd.net/h-ak-xpa1/t45.5328-0/p180x540/12061175_1000345836714985_456572149_n.jpg");
-        galleryAdapter = new GalleryAdapter(galleryUrls);
+        galleryAdapter = new GalleryAdapter(userInfo.getGalleryUrls());
     }
 
     @Override
@@ -254,7 +258,7 @@ public class DetailInfoFragment extends Fragment implements Animator.AnimatorLis
 
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
-            Glide.with(getContext()).load(galleryUrls.get(position)).asBitmap().centerCrop().listener(new RequestListener<String, Bitmap>() {
+            Glide.with(getContext()).load(galleryUrls.get(position)).asBitmap().centerCrop().sizeMultiplier(0.5f).listener(new RequestListener<String, Bitmap>() {
                 @Override
                 public boolean onException(Exception e, String model, Target<Bitmap> target, boolean isFirstResource) {
                     return false;
@@ -272,14 +276,19 @@ public class DetailInfoFragment extends Fragment implements Animator.AnimatorLis
         }
 
         private void setupRevealItem(View view) {
-            int x = view.getLeft() + ((view.getRight() - view.getLeft()) / 2);
-            int y = view.getTop() + ((view.getBottom() - view.getTop()) / 2);
+            try {
+                int x = view.getLeft() + ((view.getRight() - view.getLeft()) / 2);
+                int y = view.getTop() + ((view.getBottom() - view.getTop()) / 2);
 
-            int hypotenuse = (int) Math.hypot(view.getWidth(), view.getHeight());
+                int hypotenuse = (int) Math.hypot(view.getWidth(), view.getHeight());
 
-            Animator anim = ViewAnimationUtils.createCircularReveal(view, x, y, 0, hypotenuse);
-            anim.setDuration(700);
-            anim.start();
+                Animator anim = ViewAnimationUtils.createCircularReveal(view, x, y, 0, hypotenuse);
+                anim.setDuration(700);
+                view.setTag(anim);
+                anim.start();
+            }catch (Exception ex){
+
+            }
         }
 
         public void setLockedRevealAnimation(boolean isLocked) {

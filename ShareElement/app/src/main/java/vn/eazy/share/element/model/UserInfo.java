@@ -1,6 +1,7 @@
 package vn.eazy.share.element.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by Harry on 12/9/16.
@@ -12,13 +13,23 @@ public class UserInfo implements Serializable {
     private String company;
     private String jobPosition;
     private String cover;
+    private List<String> galleryUrls;
 
-    public UserInfo(String name, String avatar, String company, String jobPosition, String cover) {
+    public UserInfo(String name, String avatar, String company, String jobPosition, String cover, List<String> galleryUrls) {
         this.name = name;
         this.avatar = avatar;
         this.company = company;
         this.jobPosition = jobPosition;
         this.cover = cover;
+        this.galleryUrls = galleryUrls;
+    }
+
+    public List<String> getGalleryUrls() {
+        return galleryUrls;
+    }
+
+    public void setGalleryUrls(List<String> galleryUrls) {
+        this.galleryUrls = galleryUrls;
     }
 
     public String getName() {
