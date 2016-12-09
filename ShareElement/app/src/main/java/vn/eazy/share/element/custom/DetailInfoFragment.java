@@ -1,7 +1,6 @@
 package vn.eazy.share.element.custom;
 
 
-import android.animation.Animator;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -16,11 +15,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -30,7 +25,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.flaviofaria.kenburnsview.KenBurnsView;
-import com.flaviofaria.kenburnsview.RandomTransitionGenerator;
 
 import java.util.List;
 import java.util.Map;
@@ -40,7 +34,7 @@ import butterknife.ButterKnife;
 import vn.eazy.share.element.R;
 import vn.eazy.share.element.model.UserInfo;
 
-public class DetailInfoFragment extends Fragment implements Animator.AnimatorListener {
+public class DetailInfoFragment extends Fragment {
     public static final String AVATAR_DRAWABLE_KEY = "avatar_drawable";
     public static final String AVATAR_TRANS_KEY = "avatar_trans";
     public static final String NAME_TRANS_KEY = "name_trans";
@@ -143,12 +137,7 @@ public class DetailInfoFragment extends Fragment implements Animator.AnimatorLis
             }
         });
         if (getArguments() != null) {
-            ivAvatar.setTransitionName(getArguments().getString(AVATAR_TRANS_KEY));
-            tvName.setTransitionName(getArguments().getString(NAME_TRANS_KEY));
-            tvCompany.setTransitionName(getArguments().getString(COMPANY_TRANS_KEY));
-            tvJobPosition.setTransitionName(getArguments().getString(JOB_POSITION_KEY));
-            ivAvatar.setImageBitmap((Bitmap) getArguments().getParcelable(AVATAR_DRAWABLE_KEY));
-            userInfo = (UserInfo) getArguments().getSerializable(USER_INFO_KEY);
+            //Todo get data from arguments
         }
         return view;
     }
@@ -157,26 +146,10 @@ public class DetailInfoFragment extends Fragment implements Animator.AnimatorLis
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (userInfo != null) {
-            tvName.setText(userInfo.getName());
-            tvCompany.setText(userInfo.getCompany());
-            tvJobPosition.setText(userInfo.getJobPosition());
-            Glide.with(getContext()).load(userInfo.getCover()).asBitmap().centerCrop().into(ivCover);
-            RandomTransitionGenerator generator = new RandomTransitionGenerator(4000, new LinearInterpolator());
-            ivCover.setTransitionGenerator(generator);
-
+//            Glide.with(getContext()).load(userInfo.getCover()).asBitmap().centerCrop().into(ivCover);
+//            RandomTransitionGenerator generator = new RandomTransitionGenerator(4000, new LinearInterpolator());
+//            ivCover.setTransitionGenerator(generator);
             //todo animation for State layout
-            lyStates.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-                @Override
-                public boolean onPreDraw() {
-                    lyStates.getViewTreeObserver().removeOnPreDrawListener(this);
-                    lyStates.setAlpha(0);
-                    lyStates.setTranslationY(-lyStates.getHeight() / 2);
-                    lyStates.animate().alpha(1).translationY(0).setDuration(500).setInterpolator(new AccelerateInterpolator()).setListener(DetailInfoFragment.this).start();
-                    return true;
-                }
-            });
-            btnFollow.setAlpha(0);
-            btnFollow.animate().alpha(1).setDuration(1000).start();
 
         }
     }
@@ -196,25 +169,6 @@ public class DetailInfoFragment extends Fragment implements Animator.AnimatorLis
                 super.onScrolled(recyclerView, dx, dy);
             }
         });
-//        rvGallery.addOnChildAttachStateChangeListener(new RecyclerView.OnChildAttachStateChangeListener() {
-//            @Override
-//            public void onChildViewAttachedToWindow(View view) {
-// if (newState != RecyclerView.SCROLL_STATE_IDLE) {
-//                    galleryAdapter.setLockedRevealAnimation(true);
-//                } else {
-//                    galleryAdapter.setLockedRevealAnimation(false);
-//                }
-//            }
-//
-//            @Override
-//            public void onChildViewDetachedFromWindow(View view) {
-//                View ivData = view.findViewById(R.id.ivData);
-//                if(ivData != null && ivData.getTag() != null && ivData.getTag() instanceof Animator){
-//                    Animator animator = (Animator) ivData.getTag();
-//                    animator.cancel();
-//                }
-//            }
-//        });
         rvGallery.setAdapter(galleryAdapter);
     }
 
@@ -222,25 +176,6 @@ public class DetailInfoFragment extends Fragment implements Animator.AnimatorLis
         galleryAdapter = new GalleryAdapter(userInfo.getGalleryUrls());
     }
 
-    @Override
-    public void onAnimationStart(Animator animator) {
-
-    }
-
-    @Override
-    public void onAnimationEnd(Animator animator) {
-        settingRecyclerView();
-    }
-
-    @Override
-    public void onAnimationCancel(Animator animator) {
-
-    }
-
-    @Override
-    public void onAnimationRepeat(Animator animator) {
-
-    }
 
     class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHolder> {
         private List<String> galleryUrls;
@@ -277,16 +212,8 @@ public class DetailInfoFragment extends Fragment implements Animator.AnimatorLis
 
         private void setupRevealItem(View view) {
             try {
-                int x = view.getLeft() + ((view.getRight() - view.getLeft()) / 2);
-                int y = view.getTop() + ((view.getBottom() - view.getTop()) / 2);
-
-                int hypotenuse = (int) Math.hypot(view.getWidth(), view.getHeight());
-
-                Animator anim = ViewAnimationUtils.createCircularReveal(view, x, y, 0, hypotenuse);
-                anim.setDuration(700);
-                view.setTag(anim);
-                anim.start();
-            }catch (Exception ex){
+                //Todo setup reveal animation for item
+            } catch (Exception ex) {
 
             }
         }

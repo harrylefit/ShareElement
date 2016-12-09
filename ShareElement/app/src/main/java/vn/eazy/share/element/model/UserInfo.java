@@ -1,6 +1,7 @@
 package vn.eazy.share.element.model;
 
 import java.io.Serializable;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -25,6 +26,9 @@ public class UserInfo implements Serializable {
     }
 
     public List<String> getGalleryUrls() {
+        if (galleryUrls == null) {
+            return Collections.emptyList();
+        }
         return galleryUrls;
     }
 

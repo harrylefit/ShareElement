@@ -14,7 +14,6 @@ import vn.eazy.share.element.sharedElement.RecyclerViewActivity;
 
 public class DemoActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnTransDemo;
-    private Button btnActDemo;
     private Button btnRecyclerViewDemo;
     private Button btnRevealDemo;
     private Button btnBasicDemo;
@@ -25,13 +24,11 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
         btnTransDemo = (Button) findViewById(R.id.btnTransDemo);
-        btnActDemo = (Button) findViewById(R.id.btnActDemo);
         btnRecyclerViewDemo = (Button) findViewById(R.id.btnRecyclerViewDemo);
         btnRevealDemo = (Button) findViewById(R.id.btnRevealDemo);
         btnBasicDemo = (Button) findViewById(R.id.btnBasicDemo);
         btnFullAnimationDemo = (Button) findViewById(R.id.btnFullAnimationDemo);
         btnTransDemo.setOnClickListener(this);
-        btnActDemo.setOnClickListener(this);
         btnRecyclerViewDemo.setOnClickListener(this);
         btnRevealDemo.setOnClickListener(this);
         btnBasicDemo.setOnClickListener(this);
@@ -42,8 +39,6 @@ public class DemoActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view.getId() == R.id.btnTransDemo) {
             startActivity(new Intent(DemoActivity.this, MainActivity.class));
-        } else if (view.getId() == R.id.btnActDemo) {
-
         } else if (view.getId() == R.id.btnRecyclerViewDemo) {
             startActivity(new Intent(DemoActivity.this, RecyclerViewActivity.class));
         } else if (view.getId() == R.id.btnRevealDemo) {
