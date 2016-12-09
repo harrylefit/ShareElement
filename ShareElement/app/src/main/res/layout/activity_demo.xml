@@ -35,4 +35,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Demo Reveal Animation" />
+
+    <Button
+        android:id="@+id/btnBasicDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Demo Basic Animation" />
+
+    <Button
+        android:id="@+id/btnFullAnimationDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Animation" />
 </LinearLayout>

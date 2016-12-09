@@ -52,6 +52,7 @@ public class RevealFragment extends Fragment implements View.OnClickListener {
         fab.setOnClickListener(this);
         alphaAnimation = new AlphaAnimation(0, 1);
         alphaAnimation.setDuration(500);
+
         return view;
     }
 
