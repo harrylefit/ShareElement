@@ -118,6 +118,96 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/src/main/java/vn/eazy/dota/common/Constants.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/src/main/java/vn/eazy/dota/common/DTApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/src/main/java/vn/eazy/dota/data/BaseModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/src/main/java/vn/eazy/dota/data/Video.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/src/main/java/vn/eazy/dota/helper/AnimationHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/src/main/java/vn/eazy/dota/helper/BitmapHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/src/main/java/vn/eazy/dota/helper/CommonHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/src/main/java/vn/eazy/dota/ui/fragment/DiscoverListingPageFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/src/main/java/vn/eazy/dota/ui/fragment/DiscoverVideoFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/src/main/java/vn/eazy/dota/viewbinder/DiscoverChannelViewBinder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/app/src/main/res/layout/fragment_discover_listing_page.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/core/src/main/java/vn/eazy/core/helper/FragmentHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazy_dota/EazyDota/core/src/main/java/vn/eazy/core/helper/OnFragmentAction.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazyteam/travel/EazyTravel/app/src/main/core/kotlin/vn/eazy/travel/base/router/Router.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazyteam/travel/EazyTravel/app/src/main/core/kotlin/vn/eazy/travel/base/router/RouterManager.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../eazyteam/travel/EazyTravel/app/src/main/core/kotlin/vn/eazy/travel/base/router/Schema.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/project/skilltracker/vinova_skilltracker-android/app/build.gradle">
           <value>
             <set />

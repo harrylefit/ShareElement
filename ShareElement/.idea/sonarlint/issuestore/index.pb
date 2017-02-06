@@ -3,10 +3,6 @@
 app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
 P
  app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
-k
-;app/src/main/java/vn/eazy/share/element/DetailActivity.java,6/1/61d7ec48900bc340c173da63fb2a3a775a3e5967
-i
-9app/src/main/java/vn/eazy/share/element/MainActivity.java,9/3/9355544419a5d5d61205bca79c6eed175a73cc57
 Ž
 ^app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/AndroidManifest.xml,a/9/a91507baded2cba0a59f592b5973636171e6e263
 œ
@@ -237,7 +233,23 @@ happ/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/re
 happ/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/values-cs/values-cs.xml,4/7/47fcc5b1e76bf02ec77df5131dcd275683bc7995
 ˜
 happ/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/values-af/values-af.xml,4/a/4a5245965c027d3f6122c172bbb0dcbf791f0aa6
-i
-9app/src/main/java/vn/eazy/share/element/DemoFragment.java,8/2/82d5d1453ce156d1f2b0807b6ffe777cf0f5bf41
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
+y
+Iapp/src/main/java/vn/eazy/share/element/sharedElement/DetailActivity.java,e/1/e108641a1fba01a8ddf9d5b8716687711ddbb4fb
+v
+Fapp/src/main/java/vn/eazy/share/element/custom/DetailInfoFragment.java,7/c/7c1965aaca8b39fe4f4d4143c342f6d786439bf0
+y
+Iapp/src/main/java/vn/eazy/share/element/basic/BasicAnimationFragment.java,4/3/43a704c047de5eedc44a1cf5a0eae15e3d66590e
+w
+Gapp/src/main/java/vn/eazy/share/element/sharedElement/MainActivity.java,1/9/19e0b112edaa32e8219492f716e774ead28cc766
+‰
+Yapp/src/main/java/vn/eazy/share/element/sharedElement/DetailItemRecyclerViewFragment.java,a/d/ad186206c55f722bbe35801fb2c83dc4393bd2da
+y
+Iapp/src/main/java/vn/eazy/share/element/custom/FullAnimationActivity.java,1/f/1f8c9af36c3120a0b2bd6d37c85c4eadd409b263
+x
+Happ/src/main/java/vn/eazy/share/element/sharedElement/Demo2Fragment.java,1/0/1025d5c7212ac2748e2777ef800b806988f072d2
+z
+Japp/src/main/java/vn/eazy/share/element/custom/StartAnimationFragment.java,9/3/9312b061baae3fb646a54466d52ade861c9ced90
+~
+Napp/src/main/java/vn/eazy/share/element/sharedElement/RecycerViewFragment.java,8/6/86063206800a233fa8fdc8682e30fea000611a6d

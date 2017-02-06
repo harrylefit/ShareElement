@@ -1,0 +1,8 @@
+
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Èâ¶¿
+Fsquid:S1135"2Complete the task associated to this TODO comment.(ˆ®ä5
+Msquid:S1481"3Remove this unused "transitionName" local variable.(•¶¯Íùÿÿÿÿ
+Vsquid:S1854"BRemove this useless assignment to local variable "transitionName".(çø¡
+rsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(¦Õºðþÿÿÿÿ
+\squid:S1854"BRemove this useless assignment to local variable "transitionName".(•¶¯Íùÿÿÿÿ
+hsquid:S1450"SRemove the "view" field and declare it as a local variable in the relevant methods.(ØÊ»¶

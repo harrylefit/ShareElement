@@ -1,0 +1,5 @@
+
+tsquid:S1450"SRemove the "root" field and declare it as a local variable in the relevant methods.(˜ñŸúÿÿÿÿ8¼ÁâÅ+
+ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(¦Õºğşÿÿÿÿ8İ„èÎ+
+wsquid:S1450"[Remove the "imageAdapter" field and declare it as a local variable in the relevant methods.(ÄÉÒÚ8ÈŒúÅ+
+3squid:S2176"Rename this class.(Â×Öúÿÿÿÿ8 ‘á†”+

@@ -1,0 +1,5 @@
+
+hsquid:S1450"SRemove the "view" field and declare it as a local variable in the relevant methods.(ØÊ»¶
+wsquid:S1450"]Remove the "titleTransName" field and declare it as a local variable in the relevant methods.(˜œªÀþÿÿÿÿ
+msquid:S1450"XRemove the "transName" field and declare it as a local variable in the relevant methods.(—é×Ô
+rsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(¦Õºðþÿÿÿÿ

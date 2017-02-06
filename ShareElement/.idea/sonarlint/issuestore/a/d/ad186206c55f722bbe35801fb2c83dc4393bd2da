@@ -1,0 +1,4 @@
+
+isquid:S1450"URemove the "ivData" field and declare it as a local variable in the relevant methods.(¹–œ7
+hsquid:S1450"SRemove the "view" field and declare it as a local variable in the relevant methods.(ØÊ»¶
+rsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(¦Õºðþÿÿÿÿ
